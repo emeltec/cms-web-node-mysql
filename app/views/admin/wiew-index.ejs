@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>CMS dashboard</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombres</th>
+        <th scope="col">Correo</th>
+        <th scope="col">Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% results.forEach(item => { %>
+      <tr>
+        <th scope="row"><%= item.id %></th>
+        <td><%= item.name %></td>
+        <td><%= item.email %></td>
+        <td>
+          <i class="bi bi-pencil-square" style="color:#04ad29"></i>
+          <i class="bi bi-trash-fill" style="color:red;"></i>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>
